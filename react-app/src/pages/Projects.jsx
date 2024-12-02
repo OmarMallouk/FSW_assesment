@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/auth/projects") 
+      .get("http://127.0.0.1:8000/api/auth/AllPro") 
       .then((response) => {
         setProjects(response.data.projects); 
       })
