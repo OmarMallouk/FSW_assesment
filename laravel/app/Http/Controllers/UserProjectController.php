@@ -13,6 +13,7 @@ class UserProjectController extends Controller{
         $userId = auth()->id();
         $projects = UserProject::with(['user', 'project'])
         ->where('user_id', $userId) 
+        ->select('name', 'description') 
         ->get();
         
         return response()->json([
