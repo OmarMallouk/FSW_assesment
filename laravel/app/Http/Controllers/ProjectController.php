@@ -27,4 +27,20 @@ class ProjectController extends Controller{
         ]);
     }
 
+    public function save(Request $request)
+    {  
+        
+        $project = Project::create([
+            'user_id' => auth()->id(),
+            'name' => $request->name,
+            'description' =>$request->language,
+            
+        ]);
+
+        return response()->json([
+            'message' => 'File created successfully!',
+            'file' => $project
+        ], 201);
+    }
+
 }
