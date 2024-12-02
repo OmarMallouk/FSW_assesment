@@ -8,6 +8,7 @@ const Project = ({ project }) => {
       <div>
         <h3>{name}</h3>
         <div>
+          hiii
           {members.map((m) => (
             <MemberIcon user={m} key={m.id} />
           ))}

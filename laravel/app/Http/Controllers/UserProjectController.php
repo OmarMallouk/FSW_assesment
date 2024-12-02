@@ -14,7 +14,6 @@ class UserProjectController extends Controller{
         $projects = UserProject::with(['user', 'project'])
         ->where('user_id', $userId) 
         ->get();
-
         
         return response()->json([
             "projects"=> $projects
